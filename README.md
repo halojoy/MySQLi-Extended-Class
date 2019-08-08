@@ -42,8 +42,7 @@ $db->close();
 $db = require('classMysqli.php');
 
 $sql = "SELECT age FROM people ORDER BY age";
-$arr = $db->getColValues($sql);
-foreach($arr as $col)
+foreach($db->getColValues($sql) as $col)
     echo $col.'<br>';
 $db->close();
 ```
