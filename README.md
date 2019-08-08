@@ -20,7 +20,7 @@ $db->close();
 ```
 ##### Example 2
 ```php
-$db = require ('classMysqli.php');
+$db = require('classMysqli.php');
 
 $sql = "SELECT * FROM people ORDER BY fname";
 foreach($db->getRows($sql) as $row)
