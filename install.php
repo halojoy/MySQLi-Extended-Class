@@ -41,7 +41,6 @@ VAL;
         <input type="text" name="dbpass" required> Database password
         <input type="text" name="dbname" required> Database name, must have been created<br/>
         <input type="text" name="dbport" value="3306" required> Database port<br/>
-
         <br><br>
         <input type="submit" value="SUBMIT">
         </fieldset>
