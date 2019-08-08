@@ -8,8 +8,17 @@ Following custom functions:
 - getColValues()
 - insert()
 - exec()
-
 ##### Example 1
+```php
+$db = require('classMysqli.php');
+
+$id = 6;
+$sql = "SELECT * FROM people WHERE id=$id";
+$row = $db->getRow($sql);
+echo $row->fname.' '.$row->lname.' '.$row->age;
+$db->close();
+```
+##### Example 2
 ```php
 $db = require ('classMysqli.php');
 
@@ -18,7 +27,7 @@ foreach($db->getRows($sql) as $row)
     echo $row->fname.' '.$row->lname.' '.$row->age.'<br>';
 $db->close();
 ```
-##### Example 2
+##### Example 3
 ```php
 $db = require('classMysqli.php');
 
