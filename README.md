@@ -37,7 +37,7 @@ $col = $db->getCol($sql);
 echo $col;
 $db->close();
 ```
-##### Example 3
+##### Example 4
 ```php
 $db = require('classMysqli.php');
 
@@ -47,7 +47,7 @@ foreach($arr as $col)
     echo $col.'<br>';
 $db->close();
 ```
-##### Example 4
+##### Example 5
 ```php
 $db = require('classMysqli.php');
 
