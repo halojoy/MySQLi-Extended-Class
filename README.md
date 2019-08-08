@@ -12,6 +12,7 @@ Following custom functions:
 ##### Example 1
 ```php
 $db = require ('classMysqli.php');
+
 $sql = "SELECT * FROM people ORDER BY fname";
 foreach($db->getRows($sql) as $row)
     echo $row->fname.' '.$row->lname.' '.$row->age.'<br>';
@@ -19,8 +20,11 @@ $db->close();
 ```
 ##### Example 2
 ```php
+$db = require('classMysqli.php');
+
 $fname = 'Christer'; $lname = 'Uden'; $age = 50;
 $sql = "INSERT INTO people (fname,lname,age)VALUES('$fname', '$lname', $age)";
 $lastid = $db->insert($sql);
 echo $lastid;
+$db->close();
 ```
