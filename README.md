@@ -13,8 +13,7 @@ Following custom functions:
 ```php
 $db = require ('classMysqli.php');
 $sql = "SELECT * FROM people ORDER BY fname";
-$rows = $db->getRows($sql);
-foreach($rows as $row)
+foreach($db->getRows($sql) as $row)
     echo $row->fname.' '.$row->lname.' '.$row->age.'<br>';
 $db->close();
 ```
