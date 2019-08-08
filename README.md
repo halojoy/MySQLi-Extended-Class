@@ -31,6 +31,26 @@ $db->close();
 ```php
 $db = require('classMysqli.php');
 
+$id = 4;
+$sql = "SELECT fname FROM people WHERE id=$id";
+$col = $db->getCol($sql);
+echo $col;
+$db->close();
+```
+##### Example 3
+```php
+$db = require('classMysqli.php');
+
+$sql = "SELECT age FROM people ORDER BY age";
+$arr = $db->getColValues($sql);
+foreach($arr as $col)
+    echo $col.'<br>';
+$db->close();
+```
+##### Example 4
+```php
+$db = require('classMysqli.php');
+
 $fname = 'Christer'; $lname = 'Uden'; $age = 50;
 $sql = "INSERT INTO people (fname,lname,age)VALUES('$fname', '$lname', $age)";
 $lastid = $db->insert($sql);
