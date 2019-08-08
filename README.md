@@ -1,4 +1,4 @@
-### MySQLi-Extended-Class
+#### MySQLi-Extended-Class
 Supports additional custom functions and native mysqli functions.
 
 Following custom functions:
