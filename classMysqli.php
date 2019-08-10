@@ -49,6 +49,7 @@ class Database extends MySQLi
     {
         $res = $this->query($sql);
         if ($this->error) exit($this->error);
+        $this->rowCount = $res->num_rows;
         $arr = array();
         while($row = $res->fetch_row())
             $arr[] = $row[0];  
@@ -71,6 +72,12 @@ class Database extends MySQLi
         if ($this->error) exit($this->error);
         $this->affected = $this->affected_rows;
         return $this->affected;
+    }
+    
+    // Escape string before INSERT
+    public function escape($string)
+    {
+        return $this->escape_string($string)
     }
 
 }
