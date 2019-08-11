@@ -77,7 +77,7 @@ class Database extends MySQLi
     // Escape string before INSERT
     public function escape($string)
     {
-        return $this->escape_string($string)
+        return $this->escape_string($string);
     }
 
 }
