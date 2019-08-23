@@ -10,7 +10,7 @@ class Database extends MySQLi
     public function __construct()
     {
         require ('config.php');
-        parent::__construct($dbhost, $dbuser, $dbpass, $dbname, $dbport);
+        $this->connect($dbhost, $dbuser, $dbpass, $dbname, $dbport);
         if ($this->connect_error)
             exit($this->connect_error);
     }
